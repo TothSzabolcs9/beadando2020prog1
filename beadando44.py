@@ -1,5 +1,6 @@
 import statistics
 
+
 n = int(input("n = "))
 c = 0
 
