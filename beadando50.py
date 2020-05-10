@@ -1,6 +1,7 @@
 n = int(input("Útszakasz hossza méterben: "))/1000
 m = int(input("Sebességkorlát: "))
 
+
 line = input("Bemenet: ")
 
 data = []
