@@ -1,13 +1,15 @@
-n = int(input("Útszakasz hossza méterben: "))/1000
-m = int(input("Sebességkorlát: "))
-
-
-line = input("Adja meg az útszakaszra való belépés időpontját,kilépés időpontját és az autó rendszámát: ")
-
-data = []
-
-
 try:
+    sor = input("Adja meg az útszakasz hosszát méterben és a sebességkorlátot: ")
+    tomb = sor.split(" ")
+    n = int(tomb[0])/1000
+    m = int(tomb[1])
+
+    line = input("Adja meg az útszakaszra való belépés időpontját,kilépés időpontját és az autó rendszámát: ")
+
+    data = []
+
+
+
     while line != "end":
         data.append(line.split(" "))
         line = input("Adja meg az útszakaszra való belépés időpontját,kilépés időpontját és az autó rendszámát: ")
@@ -23,4 +25,6 @@ try:
             print(data[x][6], "{:.2f}km/h".format(n/t))
 
 except IndexError:
+    print("Nem a helyes sorrendben adtad meg az értékeket!")
+except ValueError:
     print("Nem jó formátumban adtad meg az értékeket!")
